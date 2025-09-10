@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Personal.App;
+﻿namespace Personal.App;
 
 public partial class Checkin : Form
 {
@@ -25,19 +15,32 @@ public partial class Checkin : Form
         }
     }
 
-    private void administratorToolStripMenuItem_Click(object sender, EventArgs e)
+    private void loginToolStripMenuItem_Click(object sender, EventArgs e)
     {
-        LoginForm loginForm = new LoginForm();
-        DialogResult dialogResult = loginForm.ShowDialog();
-        if (dialogResult == DialogResult.Yes)
+        var loginForm = new LoginForm();
+        var dialogResult = loginForm.ShowDialog();
+        if (dialogResult == DialogResult.OK)
         {
-            MessageBox.Show("Login ok");
-            loginToolStripMenuItem.Visible = false;
-            logoutToolStripMenuItem.Visible = true;
             officeToolStripMenuItem.Visible = true;
             profashionalToolStripMenuItem.Visible = true;
             sOtrudnikiToolStripMenuItem.Visible = true;
-            reportToolStripMenuItem.Visible = true;
         }
+        loginToolStripMenuItem.Visible = false;
+        logoutToolStripMenuItem.Visible = true;
+        reportToolStripMenuItem.Visible = true;
+        label1.Visible = false;
+        tbBarcode.Visible = false;
+    }
+
+    private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        loginToolStripMenuItem.Visible = true;
+        logoutToolStripMenuItem.Visible = false;
+        officeToolStripMenuItem.Visible = false;
+        profashionalToolStripMenuItem.Visible = false;
+        sOtrudnikiToolStripMenuItem.Visible = false;
+        reportToolStripMenuItem.Visible = false;
+        label1.Visible = true;
+        tbBarcode.Visible = true;
     }
 }

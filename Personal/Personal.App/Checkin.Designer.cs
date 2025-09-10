@@ -32,8 +32,6 @@
             label1 = new Label();
             menuStrip1 = new MenuStrip();
             loginToolStripMenuItem = new ToolStripMenuItem();
-            administratorToolStripMenuItem = new ToolStripMenuItem();
-            managerToolStripMenuItem = new ToolStripMenuItem();
             logoutToolStripMenuItem = new ToolStripMenuItem();
             officeToolStripMenuItem = new ToolStripMenuItem();
             profashionalToolStripMenuItem = new ToolStripMenuItem();
@@ -72,24 +70,10 @@
             // 
             // loginToolStripMenuItem
             // 
-            loginToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { administratorToolStripMenuItem, managerToolStripMenuItem });
             loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             loginToolStripMenuItem.Size = new Size(49, 20);
             loginToolStripMenuItem.Text = "Login";
-            // 
-            // administratorToolStripMenuItem
-            // 
-            administratorToolStripMenuItem.Name = "administratorToolStripMenuItem";
-            administratorToolStripMenuItem.Size = new Size(180, 22);
-            administratorToolStripMenuItem.Text = "Administrator";
-            administratorToolStripMenuItem.Click += administratorToolStripMenuItem_Click;
-            // 
-            // managerToolStripMenuItem
-            // 
-            managerToolStripMenuItem.Name = "managerToolStripMenuItem";
-            managerToolStripMenuItem.Size = new Size(180, 22);
-            managerToolStripMenuItem.Text = "Manager";
-            managerToolStripMenuItem.Click += administratorToolStripMenuItem_Click;
+            loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
             // 
             // logoutToolStripMenuItem
             // 
@@ -97,6 +81,7 @@
             logoutToolStripMenuItem.Size = new Size(57, 20);
             logoutToolStripMenuItem.Text = "Logout";
             logoutToolStripMenuItem.Visible = false;
+            logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
             // officeToolStripMenuItem
             // 
@@ -150,8 +135,6 @@
         private Label label1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem loginToolStripMenuItem;
-        private ToolStripMenuItem administratorToolStripMenuItem;
-        private ToolStripMenuItem managerToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
         private ToolStripMenuItem officeToolStripMenuItem;
         private ToolStripMenuItem profashionalToolStripMenuItem;

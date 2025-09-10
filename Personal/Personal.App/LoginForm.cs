@@ -1,40 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿namespace Personal.App;
 
-namespace Personal.App
+public partial class LoginForm : Form
 {
-    public partial class LoginForm : Form
+    public LoginForm()
     {
-        public LoginForm()
-        {
-            InitializeComponent();
+        InitializeComponent();
+    }
 
+    private void bLogin_Click(object sender, EventArgs e)
+    {
+        if (string.IsNullOrWhiteSpace(tbLogin.Text))
+        {
+            MessageBox.Show("Empty login name");
+            return;
         }
-
-        private void bLogin_Click(object sender, EventArgs e)
+        if (string.IsNullOrWhiteSpace(tbPassword.Text))
         {
-            if (tbLogin.Text=="admin" && tbPassword.Text=="sigmaboy77")
-            {
-                MessageBox.Show("Welcome admin");
-                DialogResult = DialogResult.OK;
-                return;
-            }
-            if (tbLogin.Text == "manager" && tbPassword.Text=="sigmagirl77")
-            {
-                MessageBox.Show("Welcome manager");
-                DialogResult = DialogResult.Yes;
-            }
-            else
-            {
-                MessageBox.Show("incorect");
-            }
+            MessageBox.Show("Empty password");
+            return;
+        }
+        if (tbLogin.Text == "admin" && tbPassword.Text == "sigmaboy77")
+        {
+            MessageBox.Show("Welcome admin");
+            DialogResult = DialogResult.OK;
+            return;
+        }
+        if (tbLogin.Text == "manager" && tbPassword.Text == "sigmagirl77")
+        {
+            MessageBox.Show("Welcome manager");
+            DialogResult = DialogResult.Yes;
+        }
+        else
+        {
+            MessageBox.Show("incorect");
         }
     }
 }
