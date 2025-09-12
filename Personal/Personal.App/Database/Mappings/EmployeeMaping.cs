@@ -30,5 +30,9 @@ public class EmployeeMaping : IEntityTypeConfiguration<Employee>
             .HasColumnType("nvarchar(200)")
             .HasMaxLength(200)
             .IsRequired();
+
+        builder.HasOne(x => x.Profession)
+            .WithMany(x => x.Employees)
+            .HasForeignKey(x => x.ProfessionId);
     }
 }

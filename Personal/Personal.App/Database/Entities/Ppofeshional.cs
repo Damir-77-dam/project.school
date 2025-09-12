@@ -9,4 +9,5 @@ public class Ppofeshional
 
     public string CategoriPos { get; set; }
 
+    public List<Employee> Employees { get; set; }
 }

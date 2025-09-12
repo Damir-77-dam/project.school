@@ -10,4 +10,6 @@ public class Employee
     public int ProfessionId { get; set; }
 
     public int OfficeId { get; set; }
+
+    public Ppofeshional Profession { get; set; }
 }
