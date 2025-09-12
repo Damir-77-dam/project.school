@@ -13,4 +13,8 @@ public class Office
     public string Street { get; set; }
 
     public string MobileNumber { get; set; }
+
+    public List<Employee> Employees { get; set; }
+
+    public List<CheckinEntity> Checkins { get; set; }
 }

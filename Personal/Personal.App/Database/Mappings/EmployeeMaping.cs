@@ -34,5 +34,9 @@ public class EmployeeMaping : IEntityTypeConfiguration<Employee>
         builder.HasOne(x => x.Profession)
             .WithMany(x => x.Employees)
             .HasForeignKey(x => x.ProfessionId);
+
+        builder.HasOne(x => x.Office)
+            .WithMany(x => x.Employees)
+            .HasForeignKey(x => x.OfficeId);
     }
 }

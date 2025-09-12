@@ -30,5 +30,13 @@ public class CheckinMaping : IEntityTypeConfiguration<CheckinEntity>
             .HasColumnType("nvarchar(200)")
             .HasMaxLength(200)
             .IsRequired();
+
+        builder.HasOne(x => x.Employee)
+            .WithMany(x => x.Checkins)
+            .HasForeignKey(x => x.EmployeeID);
+
+        builder.HasOne(x => x.Office)
+            .WithMany(x => x.Checkins)
+            .HasForeignKey(x => x.OfficeID);
     }
 }

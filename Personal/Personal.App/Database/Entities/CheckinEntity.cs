@@ -10,4 +10,8 @@ public class CheckinEntity
     public int EmployeeID { get; set; }
 
     public int OfficeID { get; set; }
+
+    public Employee Employee { get; set; }
+
+    public Office Office { get; set; }
 }

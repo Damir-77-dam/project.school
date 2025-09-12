@@ -12,4 +12,8 @@ public class Employee
     public int OfficeId { get; set; }
 
     public Ppofeshional Profession { get; set; }
+
+    public Office Office { get; set; }
+
+    public List<CheckinEntity> Checkins { get; set; }
 }
