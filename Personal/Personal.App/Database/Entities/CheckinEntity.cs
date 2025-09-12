@@ -1,5 +1,5 @@
 ﻿namespace Personal.App.Database.Entities;
-public class Checkin
+public class CheckinEntity
 {
     public int Id { get; set; }
 

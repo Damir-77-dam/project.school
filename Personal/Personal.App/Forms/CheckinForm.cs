@@ -1,8 +1,8 @@
 ﻿namespace Personal.App;
 
-public partial class Checkin : Form
+public partial class CheckinForm : Form
 {
-    public Checkin()
+    public CheckinForm()
     {
         InitializeComponent();
     }

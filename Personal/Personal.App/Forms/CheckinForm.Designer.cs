@@ -1,6 +1,6 @@
 ﻿namespace Personal.App
 {
-    partial class Checkin
+    partial class CheckinForm
     {
         /// <summary>
         /// Required designer variable.

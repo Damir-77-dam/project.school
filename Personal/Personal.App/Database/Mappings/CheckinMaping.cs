@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Personal.App.Database.Entities;
 
 namespace Personal.App.Database.Mappings;
-public class CheckinMaping : IEntityTypeConfiguration<Checkin>
+public class CheckinMaping : IEntityTypeConfiguration<CheckinEntity>
 {
-    public void Configure(EntityTypeBuilder<Checkin> builder)
+    public void Configure(EntityTypeBuilder<CheckinEntity> builder)
     {
         builder.ToTable("Checkins");
 
         builder.HasKey(x => x.Id);
-        builder.Property(x => x.c)
+        builder.Property(x => x.EmployeeID)
            .HasColumnName("")
            .HasColumnType("nvarchar(200)")
            .HasMaxLength(200)
