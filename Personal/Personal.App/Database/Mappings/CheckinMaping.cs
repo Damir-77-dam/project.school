@@ -7,13 +7,28 @@ public class CheckinMaping : IEntityTypeConfiguration<CheckinEntity>
 {
     public void Configure(EntityTypeBuilder<CheckinEntity> builder)
     {
-        builder.ToTable("Checkins");
+        builder.ToTable("CheckinsEntity");
 
         builder.HasKey(x => x.Id);
         builder.Property(x => x.EmployeeID)
-           .HasColumnName("")
-           .HasColumnType("nvarchar(200)")
-           .HasMaxLength(200)
-           .IsRequired();
+            .HasColumnName("EmployeeID")
+            .HasColumnType("nvarchar(200)")
+            .HasMaxLength(200)
+            .IsRequired();
+        builder.Property(x => x.Eventtime)
+            .HasColumnName("Eventtime")
+            .HasColumnType("nvarchar(200)")
+            .HasMaxLength(200)
+            .IsRequired();
+        builder.Property(x => x.OfficeID)
+            .HasColumnName("OfficeID")
+            .HasColumnType("nvarchar(200)")
+            .HasMaxLength(200)
+            .IsRequired();
+        builder.Property(x => x.TypeEvent)
+            .HasColumnName("TypeID")
+            .HasColumnType("nvarchar(200)")
+            .HasMaxLength(200)
+            .IsRequired();
     }
 }
