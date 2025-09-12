@@ -10,6 +10,10 @@ public class OfficeMaping : IEntityTypeConfiguration<Office>
         builder.ToTable("Offices");
 
         builder.HasKey(x => x.Id);
+        builder.Property(x => x.Id)
+            .HasColumnName("Id")
+            .HasColumnType("int")
+            .UseIdentityColumn();
         builder.Property(x => x.City)
             .HasColumnName("City")
             .HasColumnType("nvarchar(200)")

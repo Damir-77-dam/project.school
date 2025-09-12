@@ -10,6 +10,10 @@ public class EmployeeMaping : IEntityTypeConfiguration<Employee>
         builder.ToTable("Employees");
 
         builder.HasKey(x => x.Id);
+        builder.Property(x => x.Id)
+            .HasColumnName("Id")
+            .HasColumnType("int")
+            .UseIdentityColumn();
         builder.Property(x => x.Name)
             .HasColumnName("Name")
             .HasColumnType("nvarchar(200)")
@@ -17,13 +21,11 @@ public class EmployeeMaping : IEntityTypeConfiguration<Employee>
             .IsRequired();
         builder.Property(x => x.OfficeId)
             .HasColumnName("OfficeId")
-            .HasColumnType("nvarchar(200)")
-            .HasMaxLength(200)
+            .HasColumnType("int")
             .IsRequired();
         builder.Property(x => x.ProfessionId)
             .HasColumnName("ProfessionId")
-            .HasColumnType("nvarchar(200)")
-            .HasMaxLength(200)
+            .HasColumnType("int")
             .IsRequired();
         builder.Property(x => x.Serename)
             .HasColumnName("Serename")

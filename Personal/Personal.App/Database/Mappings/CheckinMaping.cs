@@ -10,10 +10,13 @@ public class CheckinMaping : IEntityTypeConfiguration<CheckinEntity>
         builder.ToTable("CheckinsEntity");
 
         builder.HasKey(x => x.Id);
+        builder.Property(x => x.Id)
+            .HasColumnName("Id")
+            .HasColumnType("int")
+            .UseIdentityColumn();
         builder.Property(x => x.EmployeeID)
             .HasColumnName("EmployeeID")
-            .HasColumnType("nvarchar(200)")
-            .HasMaxLength(200)
+            .HasColumnType("int")
             .IsRequired();
         builder.Property(x => x.Eventtime)
             .HasColumnName("Eventtime")
@@ -22,8 +25,7 @@ public class CheckinMaping : IEntityTypeConfiguration<CheckinEntity>
             .IsRequired();
         builder.Property(x => x.OfficeID)
             .HasColumnName("OfficeID")
-            .HasColumnType("nvarchar(200)")
-            .HasMaxLength(200)
+            .HasColumnType("int")
             .IsRequired();
         builder.Property(x => x.TypeEvent)
             .HasColumnName("TypeID")
