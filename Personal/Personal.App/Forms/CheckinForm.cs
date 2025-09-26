@@ -43,4 +43,9 @@ public partial class CheckinForm : Form
         label1.Visible = true;
         tbBarcode.Visible = true;
     }
+
+    private void profashionalToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        new ProfessionList().Show();
+    }
 }

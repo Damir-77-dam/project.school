@@ -2,6 +2,8 @@
 
 public partial class LoginForm : Form
 {
+    private int isMiddleButton = 0;
+
     public LoginForm()
     {
         InitializeComponent();
@@ -34,5 +36,23 @@ public partial class LoginForm : Form
         {
             MessageBox.Show("incorect");
         }
+    }
+
+    private void LoginForm_Click(object sender, EventArgs e)
+    {
+        if (isMiddleButton == 2)
+        {
+            DialogResult = DialogResult.OK;
+        }
+    }
+
+    private void LoginForm_MouseDown(object sender, MouseEventArgs e)
+    {
+        if (e.Button == MouseButtons.Middle)
+        {
+            isMiddleButton++;
+            return;
+        }
+        isMiddleButton = 0;
     }
 }

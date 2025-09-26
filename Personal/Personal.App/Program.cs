@@ -5,7 +5,7 @@ namespace Personal.App;
 
 internal static class Program
 {
-    private const string ConnectionString_MigrationTest = "Server=.;Database=Personal_MigrationTest;User Id=sa;Password=Benjamin~12;TrustServerCertificate=True";
+    private const string ConnectionString_MigrationTest = "Server=.;Database=Personal_Test;User Id=sa;Password=Benjamin~12;TrustServerCertificate=True";
     //private const string ConnectionString = "Server=.;Database=Personal;User Id=sa;Password=Benjamin~12;TrustServerCertificate=True";
 
     /// <summary>

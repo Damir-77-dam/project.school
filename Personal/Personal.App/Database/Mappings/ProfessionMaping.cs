@@ -4,9 +4,9 @@ using Personal.App.Database.Entities;
 
 namespace Personal.App.Database.Mappings;
 
-public class ProfessionMaping : IEntityTypeConfiguration<Ppofeshional>
+public class ProfessionMaping : IEntityTypeConfiguration<Profession>
 {
-    public void Configure(EntityTypeBuilder<Ppofeshional> builder)
+    public void Configure(EntityTypeBuilder<Profession> builder)
     {
         builder.ToTable("Profeshionals");
 
@@ -15,12 +15,12 @@ public class ProfessionMaping : IEntityTypeConfiguration<Ppofeshional>
             .HasColumnName("Id")
             .HasColumnType("int")
             .UseIdentityColumn();
-        builder.Property(x => x.CategoriPos)
+        builder.Property(x => x.PositionCategory)
             .HasColumnName("CategoriPos")
             .HasColumnType("nvarchar(200)")
             .HasMaxLength(200)
             .IsRequired();
-        builder.Property(x => x.DescribtionPos)
+        builder.Property(x => x.PositionDescription)
             .HasColumnName("DescribtionPos")
             .HasColumnType("nvarchar(300)")
             .HasMaxLength(300)

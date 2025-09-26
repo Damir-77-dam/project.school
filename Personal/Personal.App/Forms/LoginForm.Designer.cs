@@ -109,6 +109,8 @@
             Controls.Add(label1);
             Name = "LoginForm";
             Text = "Login";
+            Click += LoginForm_Click;
+            MouseDown += LoginForm_MouseDown;
             ResumeLayout(false);
             PerformLayout();
         }

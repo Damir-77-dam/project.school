@@ -44,5 +44,5 @@ public class PersonalDbContext : DbContext
     public DbSet<CheckinEntity> Checkins { get; set; }
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Office> Offices { get; set; }
-    public DbSet<Ppofeshional> Ppofeshionals { get; set; }
+    public DbSet<Profession> Ppofeshionals { get; set; }
 }

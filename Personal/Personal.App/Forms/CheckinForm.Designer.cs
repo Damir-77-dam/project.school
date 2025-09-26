@@ -93,15 +93,16 @@
             // profashionalToolStripMenuItem
             // 
             profashionalToolStripMenuItem.Name = "profashionalToolStripMenuItem";
-            profashionalToolStripMenuItem.Size = new Size(85, 20);
-            profashionalToolStripMenuItem.Text = "Profashional";
+            profashionalToolStripMenuItem.Size = new Size(79, 20);
+            profashionalToolStripMenuItem.Text = "Professions";
             profashionalToolStripMenuItem.Visible = false;
+            profashionalToolStripMenuItem.Click += profashionalToolStripMenuItem_Click;
             // 
             // sOtrudnikiToolStripMenuItem
             // 
             sOtrudnikiToolStripMenuItem.Name = "sOtrudnikiToolStripMenuItem";
-            sOtrudnikiToolStripMenuItem.Size = new Size(75, 20);
-            sOtrudnikiToolStripMenuItem.Text = "SOtrudniki";
+            sOtrudnikiToolStripMenuItem.Size = new Size(76, 20);
+            sOtrudnikiToolStripMenuItem.Text = "Employees";
             sOtrudnikiToolStripMenuItem.Visible = false;
             // 
             // reportToolStripMenuItem
@@ -111,7 +112,7 @@
             reportToolStripMenuItem.Text = "Report";
             reportToolStripMenuItem.Visible = false;
             // 
-            // Checkin
+            // CheckinForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -121,7 +122,7 @@
             Controls.Add(tbBarcode);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "Checkin";
+            Name = "CheckinForm";
             Text = "Checkin";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
