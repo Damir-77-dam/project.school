@@ -47,7 +47,7 @@ public partial class OfficeList : Form
 
     private void bAdd_Click(object sender, EventArgs e)
     {
-        //if (EditOffice.CreateForAdd().ShowDialog() == DialogResult.OK)
+        if (EditOffice.CreateForAdd().ShowDialog() == DialogResult.OK)
         {
             //refresh data
             using var context = PersonalDbContextFactory.CreateDbContext();
@@ -64,7 +64,7 @@ public partial class OfficeList : Form
             return;
         }
         var id = (int)dgvList.SelectedRows[0].Cells["cId"].Value;
-        //if (EditOffice.CreateForEdit(id).ShowDialog() == DialogResult.OK)
+        if (EditOffice.CreateForEdit(id).ShowDialog() == DialogResult.OK)
         {
             //refresh data
             using var context = PersonalDbContextFactory.CreateDbContext();

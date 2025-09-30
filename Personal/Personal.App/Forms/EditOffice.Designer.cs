@@ -30,83 +30,89 @@
         {
             bSave = new Button();
             bCancel = new Button();
-            tbPositionCategory = new TextBox();
-            lOfficeCategory = new Label();
-            tbPositionDescription = new TextBox();
-            lOfficeDescription = new Label();
-            tbPosition = new TextBox();
-            lOfficeName = new Label();
+            tbPostIndex = new TextBox();
+            lPostIndex = new Label();
+            tbCity = new TextBox();
+            lCity = new Label();
+            tbCountry = new TextBox();
+            lCountry = new Label();
             tbId = new TextBox();
             lId = new Label();
+            tbMobileNumber = new TextBox();
+            lMobileNumber = new Label();
+            tbStreet = new TextBox();
+            lStreet = new Label();
             SuspendLayout();
             // 
             // bSave
             // 
             bSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            bSave.Location = new Point(590, 134);
+            bSave.Location = new Point(590, 261);
             bSave.Name = "bSave";
             bSave.Size = new Size(75, 23);
             bSave.TabIndex = 19;
             bSave.Text = "Save";
             bSave.UseVisualStyleBackColor = true;
+            bSave.Click += bSave_Click;
             // 
             // bCancel
             // 
+            bCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             bCancel.DialogResult = DialogResult.Cancel;
-            bCancel.Location = new Point(11, 134);
+            bCancel.Location = new Point(12, 261);
             bCancel.Name = "bCancel";
             bCancel.Size = new Size(75, 23);
             bCancel.TabIndex = 18;
             bCancel.Text = "Cancel";
             bCancel.UseVisualStyleBackColor = true;
             // 
-            // tbPositionCategory
+            // tbPostIndex
             // 
-            tbPositionCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbPositionCategory.Location = new Point(219, 105);
-            tbPositionCategory.Name = "tbPositionCategory";
-            tbPositionCategory.Size = new Size(446, 23);
-            tbPositionCategory.TabIndex = 17;
+            tbPostIndex.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbPostIndex.Location = new Point(219, 105);
+            tbPostIndex.Name = "tbPostIndex";
+            tbPostIndex.Size = new Size(446, 23);
+            tbPostIndex.TabIndex = 17;
             // 
-            // lOfficeCategory
+            // lPostIndex
             // 
-            lOfficeCategory.Location = new Point(11, 108);
-            lOfficeCategory.Name = "lOfficeCategory";
-            lOfficeCategory.Size = new Size(202, 23);
-            lOfficeCategory.TabIndex = 16;
-            lOfficeCategory.Text = "Office Category";
+            lPostIndex.Location = new Point(12, 108);
+            lPostIndex.Name = "lPostIndex";
+            lPostIndex.Size = new Size(202, 23);
+            lPostIndex.TabIndex = 16;
+            lPostIndex.Text = "Post code";
             // 
-            // tbPositionDescription
+            // tbCity
             // 
-            tbPositionDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbPositionDescription.Location = new Point(219, 76);
-            tbPositionDescription.Name = "tbPositionDescription";
-            tbPositionDescription.Size = new Size(446, 23);
-            tbPositionDescription.TabIndex = 15;
+            tbCity.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbCity.Location = new Point(219, 76);
+            tbCity.Name = "tbCity";
+            tbCity.Size = new Size(446, 23);
+            tbCity.TabIndex = 15;
             // 
-            // lOfficeDescription
+            // lCity
             // 
-            lOfficeDescription.Location = new Point(11, 79);
-            lOfficeDescription.Name = "lOfficeDescription";
-            lOfficeDescription.Size = new Size(202, 23);
-            lOfficeDescription.TabIndex = 14;
-            lOfficeDescription.Text = "Office Description";
+            lCity.Location = new Point(12, 79);
+            lCity.Name = "lCity";
+            lCity.Size = new Size(202, 23);
+            lCity.TabIndex = 14;
+            lCity.Text = "City";
             // 
-            // tbPosition
+            // tbCountry
             // 
-            tbPosition.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbPosition.Location = new Point(219, 47);
-            tbPosition.Name = "tbPosition";
-            tbPosition.Size = new Size(446, 23);
-            tbPosition.TabIndex = 13;
+            tbCountry.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbCountry.Location = new Point(219, 47);
+            tbCountry.Name = "tbCountry";
+            tbCountry.Size = new Size(446, 23);
+            tbCountry.TabIndex = 13;
             // 
-            // lOfficeName
+            // lCountry
             // 
-            lOfficeName.Location = new Point(11, 50);
-            lOfficeName.Name = "lOfficeName";
-            lOfficeName.Size = new Size(202, 23);
-            lOfficeName.TabIndex = 12;
-            lOfficeName.Text = "Office Name\r\n";
+            lCountry.Location = new Point(12, 50);
+            lCountry.Name = "lCountry";
+            lCountry.Size = new Size(202, 23);
+            lCountry.TabIndex = 12;
+            lCountry.Text = "Country";
             // 
             // tbId
             // 
@@ -118,25 +124,61 @@
             // 
             // lId
             // 
-            lId.Location = new Point(11, 21);
+            lId.Location = new Point(12, 21);
             lId.Name = "lId";
             lId.Size = new Size(202, 23);
             lId.TabIndex = 10;
             lId.Text = "Id";
             // 
+            // tbMobileNumber
+            // 
+            tbMobileNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbMobileNumber.Location = new Point(219, 163);
+            tbMobileNumber.Name = "tbMobileNumber";
+            tbMobileNumber.Size = new Size(446, 23);
+            tbMobileNumber.TabIndex = 23;
+            // 
+            // lMobileNumber
+            // 
+            lMobileNumber.Location = new Point(12, 166);
+            lMobileNumber.Name = "lMobileNumber";
+            lMobileNumber.Size = new Size(202, 23);
+            lMobileNumber.TabIndex = 22;
+            lMobileNumber.Text = "Mobile number";
+            // 
+            // tbStreet
+            // 
+            tbStreet.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbStreet.Location = new Point(219, 134);
+            tbStreet.Name = "tbStreet";
+            tbStreet.Size = new Size(446, 23);
+            tbStreet.TabIndex = 21;
+            // 
+            // lStreet
+            // 
+            lStreet.Location = new Point(12, 137);
+            lStreet.Name = "lStreet";
+            lStreet.Size = new Size(202, 23);
+            lStreet.TabIndex = 20;
+            lStreet.Text = "Street";
+            // 
             // EditOffice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(676, 175);
+            ClientSize = new Size(676, 302);
+            Controls.Add(tbMobileNumber);
+            Controls.Add(lMobileNumber);
+            Controls.Add(tbStreet);
+            Controls.Add(lStreet);
             Controls.Add(bSave);
             Controls.Add(bCancel);
-            Controls.Add(tbPositionCategory);
-            Controls.Add(lOfficeCategory);
-            Controls.Add(tbPositionDescription);
-            Controls.Add(lOfficeDescription);
-            Controls.Add(tbPosition);
-            Controls.Add(lOfficeName);
+            Controls.Add(tbPostIndex);
+            Controls.Add(lPostIndex);
+            Controls.Add(tbCity);
+            Controls.Add(lCity);
+            Controls.Add(tbCountry);
+            Controls.Add(lCountry);
             Controls.Add(tbId);
             Controls.Add(lId);
             Name = "EditOffice";
@@ -149,13 +191,17 @@
 
         private Button bSave;
         private Button bCancel;
-        private TextBox tbPositionCategory;
-        private Label lOfficeCategory;
-        private TextBox tbPositionDescription;
-        private Label lOfficeDescription;
-        private TextBox tbPosition;
-        private Label lOfficeName;
+        private TextBox tbPostIndex;
+        private Label lPostIndex;
+        private TextBox tbCity;
+        private Label lCity;
+        private TextBox tbCountry;
+        private Label lCountry;
         private TextBox tbId;
         private Label lId;
+        private TextBox tbMobileNumber;
+        private Label lMobileNumber;
+        private TextBox tbStreet;
+        private Label lStreet;
     }
 }

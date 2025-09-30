@@ -30,13 +30,15 @@
         {
             bRefresh = new Button();
             dgvList = new DataGridView();
-            cId = new DataGridViewTextBoxColumn();
-            cPosition = new DataGridViewTextBoxColumn();
-            cPositionDescription = new DataGridViewTextBoxColumn();
-            cPositionCategory = new DataGridViewTextBoxColumn();
             bDelete = new Button();
             bEdit = new Button();
             bAdd = new Button();
+            cId = new DataGridViewTextBoxColumn();
+            cCountry = new DataGridViewTextBoxColumn();
+            cCity = new DataGridViewTextBoxColumn();
+            cPostIndex = new DataGridViewTextBoxColumn();
+            cStreet = new DataGridViewTextBoxColumn();
+            cMobileNumber = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvList).BeginInit();
             SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             dgvList.AllowUserToResizeRows = false;
             dgvList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvList.Columns.AddRange(new DataGridViewColumn[] { cId, cPosition, cPositionDescription, cPositionCategory });
+            dgvList.Columns.AddRange(new DataGridViewColumn[] { cId, cCountry, cCity, cPostIndex, cStreet, cMobileNumber });
             dgvList.Location = new Point(12, 46);
             dgvList.MultiSelect = false;
             dgvList.Name = "dgvList";
@@ -66,38 +68,6 @@
             dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvList.Size = new Size(967, 469);
             dgvList.TabIndex = 8;
-            // 
-            // cId
-            // 
-            cId.DataPropertyName = "Id";
-            cId.HeaderText = "Id";
-            cId.Name = "cId";
-            cId.ReadOnly = true;
-            cId.Width = 50;
-            // 
-            // cPosition
-            // 
-            cPosition.DataPropertyName = "Position";
-            cPosition.HeaderText = "Office Name";
-            cPosition.Name = "cPosition";
-            cPosition.ReadOnly = true;
-            cPosition.Width = 200;
-            // 
-            // cPositionDescription
-            // 
-            cPositionDescription.DataPropertyName = "PositionDescription";
-            cPositionDescription.HeaderText = "Office Description";
-            cPositionDescription.Name = "cPositionDescription";
-            cPositionDescription.ReadOnly = true;
-            cPositionDescription.Width = 300;
-            // 
-            // cPositionCategory
-            // 
-            cPositionCategory.DataPropertyName = "PositionCategory";
-            cPositionCategory.HeaderText = "Office Category";
-            cPositionCategory.Name = "cPositionCategory";
-            cPositionCategory.ReadOnly = true;
-            cPositionCategory.Width = 200;
             // 
             // bDelete
             // 
@@ -129,6 +99,52 @@
             bAdd.UseVisualStyleBackColor = true;
             bAdd.Click += bAdd_Click;
             // 
+            // cId
+            // 
+            cId.DataPropertyName = "Id";
+            cId.HeaderText = "Id";
+            cId.Name = "cId";
+            cId.ReadOnly = true;
+            cId.Width = 50;
+            // 
+            // cCountry
+            // 
+            cCountry.DataPropertyName = "Country";
+            cCountry.HeaderText = "Country";
+            cCountry.Name = "cCountry";
+            cCountry.ReadOnly = true;
+            cCountry.Width = 200;
+            // 
+            // cCity
+            // 
+            cCity.DataPropertyName = "City";
+            cCity.HeaderText = "City";
+            cCity.Name = "cCity";
+            cCity.ReadOnly = true;
+            cCity.Width = 300;
+            // 
+            // cPostIndex
+            // 
+            cPostIndex.DataPropertyName = "PostIndex";
+            cPostIndex.HeaderText = "Post code";
+            cPostIndex.Name = "cPostIndex";
+            cPostIndex.ReadOnly = true;
+            cPostIndex.Width = 200;
+            // 
+            // cStreet
+            // 
+            cStreet.DataPropertyName = "Street";
+            cStreet.HeaderText = "Street";
+            cStreet.Name = "cStreet";
+            cStreet.ReadOnly = true;
+            // 
+            // cMobileNumber
+            // 
+            cMobileNumber.DataPropertyName = "MobileNumber";
+            cMobileNumber.HeaderText = "Mobile number";
+            cMobileNumber.Name = "cMobileNumber";
+            cMobileNumber.ReadOnly = true;
+            // 
             // OfficeList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -154,8 +170,10 @@
         private Button bEdit;
         private Button bAdd;
         private DataGridViewTextBoxColumn cId;
-        private DataGridViewTextBoxColumn cPosition;
-        private DataGridViewTextBoxColumn cPositionDescription;
-        private DataGridViewTextBoxColumn cPositionCategory;
+        private DataGridViewTextBoxColumn cCountry;
+        private DataGridViewTextBoxColumn cCity;
+        private DataGridViewTextBoxColumn cPostIndex;
+        private DataGridViewTextBoxColumn cStreet;
+        private DataGridViewTextBoxColumn cMobileNumber;
     }
 }
