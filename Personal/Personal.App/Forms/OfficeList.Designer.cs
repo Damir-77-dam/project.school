@@ -30,13 +30,13 @@
         {
             bRefresh = new Button();
             dgvList = new DataGridView();
-            bDelete = new Button();
-            bEdit = new Button();
-            bAdd = new Button();
             cId = new DataGridViewTextBoxColumn();
             cPosition = new DataGridViewTextBoxColumn();
             cPositionDescription = new DataGridViewTextBoxColumn();
             cPositionCategory = new DataGridViewTextBoxColumn();
+            bDelete = new Button();
+            bEdit = new Button();
+            bAdd = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvList).BeginInit();
             SuspendLayout();
             // 
@@ -48,6 +48,7 @@
             bRefresh.TabIndex = 9;
             bRefresh.Text = "Refresh";
             bRefresh.UseVisualStyleBackColor = true;
+            bRefresh.Click += bRefresh_Click;
             // 
             // dgvList
             // 
@@ -65,33 +66,6 @@
             dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvList.Size = new Size(967, 469);
             dgvList.TabIndex = 8;
-            // 
-            // bDelete
-            // 
-            bDelete.Location = new Point(93, 17);
-            bDelete.Name = "bDelete";
-            bDelete.Size = new Size(75, 23);
-            bDelete.TabIndex = 7;
-            bDelete.Text = "Delete";
-            bDelete.UseVisualStyleBackColor = true;
-            // 
-            // bEdit
-            // 
-            bEdit.Location = new Point(174, 17);
-            bEdit.Name = "bEdit";
-            bEdit.Size = new Size(75, 23);
-            bEdit.TabIndex = 6;
-            bEdit.Text = "Edit";
-            bEdit.UseVisualStyleBackColor = true;
-            // 
-            // bAdd
-            // 
-            bAdd.Location = new Point(12, 17);
-            bAdd.Name = "bAdd";
-            bAdd.Size = new Size(75, 23);
-            bAdd.TabIndex = 5;
-            bAdd.Text = "Add";
-            bAdd.UseVisualStyleBackColor = true;
             // 
             // cId
             // 
@@ -125,6 +99,36 @@
             cPositionCategory.ReadOnly = true;
             cPositionCategory.Width = 200;
             // 
+            // bDelete
+            // 
+            bDelete.Location = new Point(93, 17);
+            bDelete.Name = "bDelete";
+            bDelete.Size = new Size(75, 23);
+            bDelete.TabIndex = 7;
+            bDelete.Text = "Delete";
+            bDelete.UseVisualStyleBackColor = true;
+            bDelete.Click += bDelete_Click;
+            // 
+            // bEdit
+            // 
+            bEdit.Location = new Point(174, 17);
+            bEdit.Name = "bEdit";
+            bEdit.Size = new Size(75, 23);
+            bEdit.TabIndex = 6;
+            bEdit.Text = "Edit";
+            bEdit.UseVisualStyleBackColor = true;
+            bEdit.Click += bEdit_Click;
+            // 
+            // bAdd
+            // 
+            bAdd.Location = new Point(12, 17);
+            bAdd.Name = "bAdd";
+            bAdd.Size = new Size(75, 23);
+            bAdd.TabIndex = 5;
+            bAdd.Text = "Add";
+            bAdd.UseVisualStyleBackColor = true;
+            bAdd.Click += bAdd_Click;
+            // 
             // OfficeList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -137,6 +141,7 @@
             Controls.Add(bAdd);
             Name = "OfficeList";
             Text = "OfficeList";
+            Load += OfficeList_Load;
             ((System.ComponentModel.ISupportInitialize)dgvList).EndInit();
             ResumeLayout(false);
         }
