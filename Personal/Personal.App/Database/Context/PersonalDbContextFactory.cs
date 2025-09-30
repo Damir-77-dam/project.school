@@ -4,7 +4,7 @@ namespace Personal.App.Database.Context;
 
 public static class PersonalDbContextFactory
 {
-    private const string ConnectionString_Test = "Server=.;Database=Personal_Test;User Id=sa;Password=Benjamin~12;TrustServerCertificate=True";
+    public const string ConnectionString_Test = "Server=.;Database=Personal_Test;Integrated Security=True;TrustServerCertificate=True";
 
     public static PersonalDbContext CreateDbContext()
     {

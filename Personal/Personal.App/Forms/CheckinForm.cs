@@ -48,4 +48,9 @@ public partial class CheckinForm : Form
     {
         new ProfessionList().Show();
     }
+
+    private void officeToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        new OfficeList().Show();
+    }
 }

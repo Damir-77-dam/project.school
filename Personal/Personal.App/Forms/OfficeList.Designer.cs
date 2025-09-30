@@ -28,66 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            bRefresh = new Button();
+            dgvList = new DataGridView();
+            bDelete = new Button();
+            bEdit = new Button();
+            bAdd = new Button();
+            cId = new DataGridViewTextBoxColumn();
+            cPosition = new DataGridViewTextBoxColumn();
+            cPositionDescription = new DataGridViewTextBoxColumn();
+            cPositionCategory = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvList).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // bRefresh
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dataGridView1.Location = new Point(24, 101);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(583, 309);
-            dataGridView1.TabIndex = 0;
+            bRefresh.Location = new Point(255, 17);
+            bRefresh.Name = "bRefresh";
+            bRefresh.Size = new Size(75, 23);
+            bRefresh.TabIndex = 9;
+            bRefresh.Text = "Refresh";
+            bRefresh.UseVisualStyleBackColor = true;
             // 
-            // Column1
+            // dgvList
             // 
-            Column1.HeaderText = "Column1";
-            Column1.Name = "Column1";
+            dgvList.AllowUserToAddRows = false;
+            dgvList.AllowUserToDeleteRows = false;
+            dgvList.AllowUserToResizeRows = false;
+            dgvList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvList.Columns.AddRange(new DataGridViewColumn[] { cId, cPosition, cPositionDescription, cPositionCategory });
+            dgvList.Location = new Point(12, 46);
+            dgvList.MultiSelect = false;
+            dgvList.Name = "dgvList";
+            dgvList.ReadOnly = true;
+            dgvList.RowHeadersVisible = false;
+            dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvList.Size = new Size(967, 469);
+            dgvList.TabIndex = 8;
             // 
-            // Column2
+            // bDelete
             // 
-            Column2.HeaderText = "Column2";
-            Column2.Name = "Column2";
+            bDelete.Location = new Point(93, 17);
+            bDelete.Name = "bDelete";
+            bDelete.Size = new Size(75, 23);
+            bDelete.TabIndex = 7;
+            bDelete.Text = "Delete";
+            bDelete.UseVisualStyleBackColor = true;
             // 
-            // Column3
+            // bEdit
             // 
-            Column3.HeaderText = "Column3";
-            Column3.Name = "Column3";
+            bEdit.Location = new Point(174, 17);
+            bEdit.Name = "bEdit";
+            bEdit.Size = new Size(75, 23);
+            bEdit.TabIndex = 6;
+            bEdit.Text = "Edit";
+            bEdit.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // bAdd
             // 
-            button1.Location = new Point(47, 35);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            bAdd.Location = new Point(12, 17);
+            bAdd.Name = "bAdd";
+            bAdd.Size = new Size(75, 23);
+            bAdd.TabIndex = 5;
+            bAdd.Text = "Add";
+            bAdd.UseVisualStyleBackColor = true;
+            // 
+            // cId
+            // 
+            cId.DataPropertyName = "Id";
+            cId.HeaderText = "Id";
+            cId.Name = "cId";
+            cId.ReadOnly = true;
+            cId.Width = 50;
+            // 
+            // cPosition
+            // 
+            cPosition.DataPropertyName = "Position";
+            cPosition.HeaderText = "Office Name";
+            cPosition.Name = "cPosition";
+            cPosition.ReadOnly = true;
+            cPosition.Width = 200;
+            // 
+            // cPositionDescription
+            // 
+            cPositionDescription.DataPropertyName = "PositionDescription";
+            cPositionDescription.HeaderText = "Office Description";
+            cPositionDescription.Name = "cPositionDescription";
+            cPositionDescription.ReadOnly = true;
+            cPositionDescription.Width = 300;
+            // 
+            // cPositionCategory
+            // 
+            cPositionCategory.DataPropertyName = "PositionCategory";
+            cPositionCategory.HeaderText = "Office Category";
+            cPositionCategory.Name = "cPositionCategory";
+            cPositionCategory.ReadOnly = true;
+            cPositionCategory.Width = 200;
             // 
             // OfficeList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(1015, 541);
+            Controls.Add(bRefresh);
+            Controls.Add(dgvList);
+            Controls.Add(bDelete);
+            Controls.Add(bEdit);
+            Controls.Add(bAdd);
             Name = "OfficeList";
             Text = "OfficeList";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvList).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private Button button1;
+        private Button bRefresh;
+        private DataGridView dgvList;
+        private Button bDelete;
+        private Button bEdit;
+        private Button bAdd;
+        private DataGridViewTextBoxColumn cId;
+        private DataGridViewTextBoxColumn cPosition;
+        private DataGridViewTextBoxColumn cPositionDescription;
+        private DataGridViewTextBoxColumn cPositionCategory;
     }
 }

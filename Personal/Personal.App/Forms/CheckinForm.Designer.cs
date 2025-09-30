@@ -89,6 +89,7 @@
             officeToolStripMenuItem.Size = new Size(51, 20);
             officeToolStripMenuItem.Text = "Office";
             officeToolStripMenuItem.Visible = false;
+            officeToolStripMenuItem.Click += officeToolStripMenuItem_Click;
             // 
             // profashionalToolStripMenuItem
             // 

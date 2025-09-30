@@ -5,9 +5,6 @@ namespace Personal.App;
 
 internal static class Program
 {
-    private const string ConnectionString_MigrationTest = "Server=.;Database=Personal_Test;User Id=sa;Password=Benjamin~12;TrustServerCertificate=True";
-    //private const string ConnectionString = "Server=.;Database=Personal;User Id=sa;Password=Benjamin~12;TrustServerCertificate=True";
-
     /// <summary>
     ///  The main entry point for the application.
     /// </summary>
@@ -15,7 +12,7 @@ internal static class Program
     static void Main()
     {
         var builder = new DbContextOptionsBuilder<PersonalDbContext>();
-        builder.UseSqlServer(ConnectionString_MigrationTest);
+        builder.UseSqlServer(PersonalDbContextFactory.ConnectionString_Test);
         var context = new PersonalDbContext(builder.Options);
         context.ChangeTracker.Clear();
         var pending = context.Database.GetPendingMigrations();
