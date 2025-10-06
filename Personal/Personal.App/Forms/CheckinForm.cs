@@ -53,4 +53,9 @@ public partial class CheckinForm : Form
     {
         new OfficeList().Show();
     }
+
+    private void sOtrudnikiToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        new EmployeeList().Show();
+    }
 }

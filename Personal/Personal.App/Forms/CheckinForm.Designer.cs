@@ -105,6 +105,7 @@
             sOtrudnikiToolStripMenuItem.Size = new Size(76, 20);
             sOtrudnikiToolStripMenuItem.Text = "Employees";
             sOtrudnikiToolStripMenuItem.Visible = false;
+            sOtrudnikiToolStripMenuItem.Click += sOtrudnikiToolStripMenuItem_Click;
             // 
             // reportToolStripMenuItem
             // 
