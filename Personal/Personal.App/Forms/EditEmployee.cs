@@ -25,8 +25,8 @@ namespace Personal.App
                 tbId.Text = entity.Id.ToString();
                 tbName.Text = entity.Name;
                 tbSerename.Text = entity.Serename;
-                //tbProffesionId.Text = entity.ProfessionId;
-               // tbOfficeId.Text = entity.OfficeId;
+                tbProffesionId.Text = entity.ProfessionId.ToString();
+                tbOfficeId.Text = entity.OfficeId.ToString();
             }
         }
 
@@ -53,8 +53,8 @@ namespace Personal.App
                         Id = _id.Value,
                         Name = tbName.Text,
                         Serename = tbSerename.Text,
-                        //ProfessionId = tbProfessionId.Text,
-                        //OfficeId = tbOfficeId.Text,
+                        ProfessionId = _id.Value,
+                        OfficeId = _id.Value,
                     });
                     context.SaveChanges();
                     DialogResult = DialogResult.OK;
@@ -73,8 +73,8 @@ namespace Personal.App
                     {
                         Name = tbName.Text,
                         Serename = tbSerename.Text,
-                        //ProfessionId = tbProfessionId.Text,
-                        //OfficeId = tbOfficeId.Text,
+                        ProfessionId = _id.Value,
+                        OfficeId = _id.Value,
                     });
                     context.SaveChanges();
                     DialogResult = DialogResult.OK;
