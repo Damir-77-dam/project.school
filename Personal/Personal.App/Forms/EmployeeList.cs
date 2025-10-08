@@ -1,4 +1,5 @@
-﻿using Personal.App.Database.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using Personal.App.Database.Context;
 using Personal.App.Database.Entities;
 
 namespace Personal.App;
@@ -14,7 +15,20 @@ public partial class EmployeeList : Form
     private void EmployeeList_Load(object sender, EventArgs e)
     {
         using var context = PersonalDbContextFactory.CreateDbContext();
-        var list = context.Employees.ToList();
+        var list = context.Employees
+            .Include(x => x.Office)
+            .Include(x => x.Profession)
+            .Select(x => new
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Serename = x.Serename,
+                ProfessionId = x.ProfessionId,
+                Position = x.Profession.Position,
+                OfficeId = x.OfficeId,
+                Office = x.Office.FullInfo
+            })
+            .ToList();
         dgvList.DataSource = list;
     }
 
@@ -76,7 +90,20 @@ public partial class EmployeeList : Form
     private void bRefresh_Click(object sender, EventArgs e)
     {
         using var context = PersonalDbContextFactory.CreateDbContext();
-        var list = context.Employees.ToList();
+        var list = context.Employees
+            .Include(x => x.Office)
+            .Include(x => x.Profession)
+            .Select(x => new
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Serename = x.Serename,
+                ProfessionId = x.ProfessionId,
+                Position = x.Profession.Position,
+                OfficeId = x.OfficeId,
+                Office = x.Office.FullInfo
+            })
+            .ToList();
         dgvList.DataSource = list;
     }
 }

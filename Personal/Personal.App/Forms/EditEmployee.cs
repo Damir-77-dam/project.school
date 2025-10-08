@@ -18,15 +18,29 @@ namespace Personal.App
             InitializeComponent();
             _id = id;
             _isEditMode = id != null;
+            using var context = PersonalDbContextFactory.CreateDbContext();
+
+            //Profession
+            var professionList = context.Ppofeshionals.ToList();
+            cbProfession.DataSource = professionList;
+
+            //Office
+            var officeList = context.Offices.ToList();
+            cbOffice.DataSource = officeList;
+
             if (_isEditMode)
             {
-                using var context = PersonalDbContextFactory.CreateDbContext();
                 var entity = context.Employees.First(x => x.Id == id.Value);
+
                 tbId.Text = entity.Id.ToString();
                 tbName.Text = entity.Name;
                 tbSerename.Text = entity.Serename;
-                tbProffesionId.Text = entity.ProfessionId.ToString();
-                tbOfficeId.Text = entity.OfficeId.ToString();
+
+                //Profession
+                cbProfession.SelectedValue = entity.ProfessionId;
+
+                //Office
+                cbOffice.SelectedValue = entity.OfficeId;
             }
         }
 
@@ -53,8 +67,8 @@ namespace Personal.App
                         Id = _id.Value,
                         Name = tbName.Text,
                         Serename = tbSerename.Text,
-                        ProfessionId = _id.Value,
-                        OfficeId = _id.Value,
+                        ProfessionId = (int)cbProfession.SelectedValue,
+                        OfficeId = (int)cbOffice.SelectedValue
                     });
                     context.SaveChanges();
                     DialogResult = DialogResult.OK;
@@ -73,8 +87,8 @@ namespace Personal.App
                     {
                         Name = tbName.Text,
                         Serename = tbSerename.Text,
-                        ProfessionId = _id.Value,
-                        OfficeId = _id.Value,
+                        ProfessionId = (int)cbProfession.SelectedValue,
+                        OfficeId = (int)cbOffice.SelectedValue
                     });
                     context.SaveChanges();
                     DialogResult = DialogResult.OK;

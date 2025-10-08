@@ -2,7 +2,7 @@
 
 public partial class LoginForm : Form
 {
-    private int isMiddleButton = 0;
+    private int _isMiddleButton;
 
     public LoginForm()
     {
@@ -40,7 +40,7 @@ public partial class LoginForm : Form
 
     private void LoginForm_Click(object sender, EventArgs e)
     {
-        if (isMiddleButton == 2)
+        if (_isMiddleButton == 2)
         {
             DialogResult = DialogResult.OK;
         }
@@ -50,9 +50,9 @@ public partial class LoginForm : Form
     {
         if (e.Button == MouseButtons.Middle)
         {
-            isMiddleButton++;
+            _isMiddleButton++;
             return;
         }
-        isMiddleButton = 0;
+        _isMiddleButton = 0;
     }
 }

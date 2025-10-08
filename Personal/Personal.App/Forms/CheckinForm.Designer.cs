@@ -126,6 +126,8 @@
             MainMenuStrip = menuStrip1;
             Name = "CheckinForm";
             Text = "Checkin";
+            Click += CheckinForm_Click;
+            MouseDown += CheckinForm_MouseDown;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

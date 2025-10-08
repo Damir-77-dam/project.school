@@ -2,6 +2,8 @@
 
 public partial class CheckinForm : Form
 {
+    private int _isMiddleButton;
+
     public CheckinForm()
     {
         InitializeComponent();
@@ -57,5 +59,30 @@ public partial class CheckinForm : Form
     private void sOtrudnikiToolStripMenuItem_Click(object sender, EventArgs e)
     {
         new EmployeeList().Show();
+    }
+
+    private void CheckinForm_Click(object sender, EventArgs e)
+    {
+        if (_isMiddleButton == 2)
+        {
+            officeToolStripMenuItem.Visible = true;
+            profashionalToolStripMenuItem.Visible = true;
+            sOtrudnikiToolStripMenuItem.Visible = true;
+            loginToolStripMenuItem.Visible = false;
+            logoutToolStripMenuItem.Visible = true;
+            reportToolStripMenuItem.Visible = true;
+            label1.Visible = false;
+            tbBarcode.Visible = false;
+        }
+    }
+
+    private void CheckinForm_MouseDown(object sender, MouseEventArgs e)
+    {
+        if (e.Button == MouseButtons.Middle)
+        {
+            _isMiddleButton++;
+            return;
+        }
+        _isMiddleButton = 0;
     }
 }

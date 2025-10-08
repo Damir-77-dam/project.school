@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tbProffesion = new TextBox();
-            lProffesion = new Label();
-            tbOfficeId = new TextBox();
             lOfficeId = new Label();
             bSave = new Button();
             bCancel = new Button();
-            tbProffesionId = new TextBox();
             lProffesionId = new Label();
             tbSerename = new TextBox();
             lSerename = new Label();
@@ -42,35 +38,9 @@
             lName = new Label();
             tbId = new TextBox();
             lId = new Label();
-            tbCheckinEntity = new TextBox();
-            lOffice = new Label();
-            tbOffice = new TextBox();
-            lCheckinEntity = new Label();
+            cbOffice = new ComboBox();
+            cbProfession = new ComboBox();
             SuspendLayout();
-            // 
-            // tbProffesion
-            // 
-            tbProffesion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbProffesion.Location = new Point(214, 153);
-            tbProffesion.Name = "tbProffesion";
-            tbProffesion.Size = new Size(446, 23);
-            tbProffesion.TabIndex = 37;
-            // 
-            // lProffesion
-            // 
-            lProffesion.Location = new Point(7, 156);
-            lProffesion.Name = "lProffesion";
-            lProffesion.Size = new Size(202, 23);
-            lProffesion.TabIndex = 36;
-            lProffesion.Text = "Proffesion";
-            // 
-            // tbOfficeId
-            // 
-            tbOfficeId.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbOfficeId.Location = new Point(214, 124);
-            tbOfficeId.Name = "tbOfficeId";
-            tbOfficeId.Size = new Size(446, 23);
-            tbOfficeId.TabIndex = 35;
             // 
             // lOfficeId
             // 
@@ -78,7 +48,7 @@
             lOfficeId.Name = "lOfficeId";
             lOfficeId.Size = new Size(202, 23);
             lOfficeId.TabIndex = 34;
-            lOfficeId.Text = "OfficeId";
+            lOfficeId.Text = "Office";
             // 
             // bSave
             // 
@@ -102,28 +72,20 @@
             bCancel.Text = "Cancel";
             bCancel.UseVisualStyleBackColor = true;
             // 
-            // tbProffesionId
-            // 
-            tbProffesionId.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbProffesionId.Location = new Point(214, 95);
-            tbProffesionId.Name = "tbProffesionId";
-            tbProffesionId.Size = new Size(446, 23);
-            tbProffesionId.TabIndex = 31;
-            // 
             // lProffesionId
             // 
             lProffesionId.Location = new Point(7, 98);
             lProffesionId.Name = "lProffesionId";
             lProffesionId.Size = new Size(202, 23);
             lProffesionId.TabIndex = 30;
-            lProffesionId.Text = "ProffesionId";
+            lProffesionId.Text = "Proffesion";
             // 
             // tbSerename
             // 
             tbSerename.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbSerename.Location = new Point(214, 66);
             tbSerename.Name = "tbSerename";
-            tbSerename.Size = new Size(446, 23);
+            tbSerename.Size = new Size(440, 23);
             tbSerename.TabIndex = 29;
             // 
             // lSerename
@@ -139,7 +101,7 @@
             tbName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbName.Location = new Point(214, 37);
             tbName.Name = "tbName";
-            tbName.Size = new Size(446, 23);
+            tbName.Size = new Size(440, 23);
             tbName.TabIndex = 27;
             // 
             // lName
@@ -166,54 +128,38 @@
             lId.TabIndex = 24;
             lId.Text = "Id";
             // 
-            // tbCheckinEntity
+            // cbOffice
             // 
-            tbCheckinEntity.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbCheckinEntity.Location = new Point(214, 211);
-            tbCheckinEntity.Name = "tbCheckinEntity";
-            tbCheckinEntity.Size = new Size(446, 23);
-            tbCheckinEntity.TabIndex = 41;
+            cbOffice.DisplayMember = "FullInfo";
+            cbOffice.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbOffice.FormattingEnabled = true;
+            cbOffice.Location = new Point(215, 124);
+            cbOffice.Name = "cbOffice";
+            cbOffice.Size = new Size(439, 23);
+            cbOffice.TabIndex = 36;
+            cbOffice.ValueMember = "Id";
             // 
-            // lOffice
+            // cbProfession
             // 
-            lOffice.Location = new Point(7, 185);
-            lOffice.Name = "lOffice";
-            lOffice.Size = new Size(202, 23);
-            lOffice.TabIndex = 40;
-            lOffice.Text = "Office";
-            // 
-            // tbOffice
-            // 
-            tbOffice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbOffice.Location = new Point(214, 182);
-            tbOffice.Name = "tbOffice";
-            tbOffice.Size = new Size(446, 23);
-            tbOffice.TabIndex = 39;
-            // 
-            // lCheckinEntity
-            // 
-            lCheckinEntity.Location = new Point(7, 214);
-            lCheckinEntity.Name = "lCheckinEntity";
-            lCheckinEntity.Size = new Size(202, 23);
-            lCheckinEntity.TabIndex = 38;
-            lCheckinEntity.Text = "CheckinEntity";
+            cbProfession.DisplayMember = "Position";
+            cbProfession.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbProfession.FormattingEnabled = true;
+            cbProfession.Location = new Point(215, 95);
+            cbProfession.Name = "cbProfession";
+            cbProfession.Size = new Size(439, 23);
+            cbProfession.TabIndex = 37;
+            cbProfession.ValueMember = "Id";
             // 
             // EditEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(666, 309);
-            Controls.Add(tbCheckinEntity);
-            Controls.Add(lOffice);
-            Controls.Add(tbOffice);
-            Controls.Add(lCheckinEntity);
-            Controls.Add(tbProffesion);
-            Controls.Add(lProffesion);
-            Controls.Add(tbOfficeId);
+            Controls.Add(cbProfession);
+            Controls.Add(cbOffice);
             Controls.Add(lOfficeId);
             Controls.Add(bSave);
             Controls.Add(bCancel);
-            Controls.Add(tbProffesionId);
             Controls.Add(lProffesionId);
             Controls.Add(tbSerename);
             Controls.Add(lSerename);
@@ -228,9 +174,6 @@
         }
 
         #endregion
-
-        private TextBox tbProffesion;
-        private Label lProffesion;
         private TextBox tbOfficeId;
         private Label lOfficeId;
         private Button bSave;
@@ -243,9 +186,7 @@
         private Label lName;
         private TextBox tbId;
         private Label lId;
-        private TextBox tbCheckinEntity;
-        private Label lOffice;
-        private TextBox tbOffice;
-        private Label lCheckinEntity;
+        private ComboBox cbOffice;
+        private ComboBox cbProfession;
     }
 }

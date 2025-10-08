@@ -17,4 +17,6 @@ public class Office
     public List<Employee> Employees { get; set; }
 
     public List<CheckinEntity> Checkins { get; set; }
+
+    public string FullInfo { get { return string.Join(", ", Country, City, PostIndex, Street); } }
 }
