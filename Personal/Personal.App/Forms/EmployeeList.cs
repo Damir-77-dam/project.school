@@ -49,7 +49,20 @@ public partial class EmployeeList : Form
                 context.Employees.Remove(new Employee() { Id = id });
                 context.SaveChanges();
                 //refresh data
-                var list = context.Employees.ToList();
+                var list = context.Employees
+                    .Include(x => x.Office)
+                    .Include(x => x.Profession)
+                    .Select(x => new
+                    {
+                        Id = x.Id,
+                        Name = x.Name,
+                        Serename = x.Serename,
+                        ProfessionId = x.ProfessionId,
+                        Position = x.Profession.Position,
+                        OfficeId = x.OfficeId,
+                        Office = x.Office.FullInfo
+                    })
+                    .ToList();
                 dgvList.DataSource = list;
             }
         }
@@ -65,7 +78,20 @@ public partial class EmployeeList : Form
         {
             //refresh data
             using var context = PersonalDbContextFactory.CreateDbContext();
-            var list = context.Employees.ToList();
+            var list = context.Employees
+                .Include(x => x.Office)
+                .Include(x => x.Profession)
+                .Select(x => new
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Serename = x.Serename,
+                    ProfessionId = x.ProfessionId,
+                    Position = x.Profession.Position,
+                    OfficeId = x.OfficeId,
+                    Office = x.Office.FullInfo
+                })
+                .ToList();
             dgvList.DataSource = list;
         }
     }
@@ -82,7 +108,20 @@ public partial class EmployeeList : Form
         {
             //refresh data
             using var context = PersonalDbContextFactory.CreateDbContext();
-            var list = context.Employees.ToList();
+            var list = context.Employees
+                .Include(x => x.Office)
+                .Include(x => x.Profession)
+                .Select(x => new
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Serename = x.Serename,
+                    ProfessionId = x.ProfessionId,
+                    Position = x.Profession.Position,
+                    OfficeId = x.OfficeId,
+                    Office = x.Office.FullInfo
+                })
+                .ToList();
             dgvList.DataSource = list;
         }
     }

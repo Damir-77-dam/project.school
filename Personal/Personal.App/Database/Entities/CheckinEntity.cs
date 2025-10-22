@@ -11,6 +11,8 @@ public class CheckinEntity
 
     public int OfficeID { get; set; }
 
+    public char CardCode { get; set; }
+
     public Employee Employee { get; set; }
 
     public Office Office { get; set; }
