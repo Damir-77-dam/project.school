@@ -79,7 +79,8 @@ namespace Personal.App.Migrations
                     Eventtime = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     TypeID = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     EmployeeID = table.Column<int>(type: "int", nullable: false),
-                    OfficeID = table.Column<int>(type: "int", nullable: false)
+                    OfficeID = table.Column<int>(type: "int", nullable: false),
+                    CardCode = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                 },
                 constraints: table =>
                 {
@@ -117,6 +118,11 @@ namespace Personal.App.Migrations
                 name: "IX_Employees_ProfessionId",
                 table: "Employees",
                 column: "ProfessionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Employees_ProfessionId",
+                table: "Employees",
+                column: "CardCode");
         }
 
         /// <inheritdoc />

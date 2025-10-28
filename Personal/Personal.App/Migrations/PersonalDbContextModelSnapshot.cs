@@ -41,7 +41,11 @@ namespace Personal.App.Migrations
                         .HasColumnName("Eventtime");
 
                     b.Property<int>("OfficeID")
-                        .HasColumnType("int")
+                       .HasColumnType("int")
+                       .HasColumnName("OfficeID");
+
+                    b.Property<int>("CardCode")
+                        .HasColumnType("string")
                         .HasColumnName("OfficeID");
 
                     b.Property<string>("TypeEvent")
@@ -55,6 +59,8 @@ namespace Personal.App.Migrations
                     b.HasIndex("EmployeeID");
 
                     b.HasIndex("OfficeID");
+
+                    b.HasIndex("CardCode");
 
                     b.ToTable("CheckinsEntity", (string)null);
                 });
