@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Personal.App.Database.Entities;
+using System.Reflection.Emit;
 
 namespace Personal.App.Database.Mappings;
 public class EmployeeMaping : IEntityTypeConfiguration<Employee>
@@ -22,6 +23,11 @@ public class EmployeeMaping : IEntityTypeConfiguration<Employee>
         builder.Property(x => x.OfficeId)
             .HasColumnName("OfficeId")
             .HasColumnType("int")
+            .IsRequired();
+        builder.Property(x => x.CardCode)
+            .HasColumnName("CardCode")
+            .HasColumnType("nvarchar(50)")
+            .HasMaxLength(50)
             .IsRequired();
         builder.Property(x => x.ProfessionId)
             .HasColumnName("ProfessionId")

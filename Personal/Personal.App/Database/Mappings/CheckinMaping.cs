@@ -27,10 +27,6 @@ public class CheckinMaping : IEntityTypeConfiguration<CheckinEntity>
             .HasColumnName("OfficeID")
             .HasColumnType("int")
             .IsRequired();
-        builder.Property(x => x.CardCode)
-            .HasColumnName("CardCode")
-            .HasColumnType("int")
-            .IsRequired();
         builder.Property(x => x.TypeEvent)
             .HasColumnName("TypeID")
             .HasColumnType("nvarchar(200)")

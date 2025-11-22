@@ -11,6 +11,8 @@ public class Employee
 
     public int OfficeId { get; set; }
 
+    public string CardCode { get; set; }
+
     public Profession Profession { get; set; }
 
     public Office Office { get; set; }
