@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tbCardode = new TextBox();
+            tbBarcode = new TextBox();
             label1 = new Label();
             menuStrip1 = new MenuStrip();
             loginToolStripMenuItem = new ToolStripMenuItem();
@@ -37,18 +37,17 @@
             profashionalToolStripMenuItem = new ToolStripMenuItem();
             sOtrudnikiToolStripMenuItem = new ToolStripMenuItem();
             reportToolStripMenuItem = new ToolStripMenuItem();
-            button1 = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // tbCardode
+            // tbBarcode
             // 
-            tbCardode.Font = new Font("Cascadia Mono", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            tbCardode.Location = new Point(303, 70);
-            tbCardode.Name = "tbCardode";
-            tbCardode.Size = new Size(254, 45);
-            tbCardode.TabIndex = 0;
-            tbCardode.TextChanged += tbBarcode_TextChanged;
+            tbBarcode.Font = new Font("Cascadia Mono", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            tbBarcode.Location = new Point(303, 70);
+            tbBarcode.Name = "tbBarcode";
+            tbBarcode.Size = new Size(254, 45);
+            tbBarcode.TabIndex = 0;
+            tbBarcode.TextChanged += tbBarcode_TextChanged;
             // 
             // label1
             // 
@@ -115,25 +114,14 @@
             reportToolStripMenuItem.Text = "Report";
             reportToolStripMenuItem.Visible = false;
             // 
-            // button1
-            // 
-            button1.Location = new Point(199, 240);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 3;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // CheckinForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(tbCardode);
+            Controls.Add(tbBarcode);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "CheckinForm";
@@ -148,7 +136,7 @@
 
         #endregion
 
-        private TextBox tbCardode;
+        private TextBox tbBarcode;
         private Label label1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem loginToolStripMenuItem;
@@ -157,6 +145,5 @@
         private ToolStripMenuItem profashionalToolStripMenuItem;
         private ToolStripMenuItem sOtrudnikiToolStripMenuItem;
         private ToolStripMenuItem reportToolStripMenuItem;
-        private Button button1;
     }
 }
