@@ -51,7 +51,8 @@ namespace Personal.App.Migrations
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Serename = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     ProfessionId = table.Column<int>(type: "int", nullable: false),
-                    OfficeId = table.Column<int>(type: "int", nullable: false)
+                    OfficeId = table.Column<int>(type: "int", nullable: false),
+                    CardCode = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {

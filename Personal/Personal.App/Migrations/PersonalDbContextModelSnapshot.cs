@@ -44,7 +44,7 @@ namespace Personal.App.Migrations
                        .HasColumnType("int")
                        .HasColumnName("OfficeID");
 
-                    b.Property<int>("CardCode")
+                    b.Property<string>("CardCode")
                         .HasColumnType("string")
                         .HasColumnName("OfficeID");
 

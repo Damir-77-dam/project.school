@@ -26,7 +26,7 @@ public class EmployeeMaping : IEntityTypeConfiguration<Employee>
             .IsRequired();
         builder.Property(x => x.CardCode)
             .HasColumnName("CardCode")
-            .HasColumnType("nvarchar(50)")
+            .HasColumnType("varchar(50)")
             .HasMaxLength(50)
             .IsRequired();
         builder.Property(x => x.ProfessionId)
