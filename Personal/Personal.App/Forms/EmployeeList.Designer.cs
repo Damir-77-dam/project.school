@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             bRefresh = new Button();
-            dgvList = new DataGridView();
             bDelete = new Button();
             bEdit = new Button();
             bAdd = new Button();
+            dgvList = new DataGridView();
             cId = new DataGridViewTextBoxColumn();
             cName = new DataGridViewTextBoxColumn();
             cSerename = new DataGridViewTextBoxColumn();
@@ -40,6 +40,7 @@
             cOfficeId = new DataGridViewTextBoxColumn();
             cProfession = new DataGridViewTextBoxColumn();
             cOffice = new DataGridViewTextBoxColumn();
+            cCardCode = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvList).BeginInit();
             SuspendLayout();
             // 
@@ -52,23 +53,6 @@
             bRefresh.Text = "Refresh";
             bRefresh.UseVisualStyleBackColor = true;
             bRefresh.Click += bRefresh_Click;
-            // 
-            // dgvList
-            // 
-            dgvList.AllowUserToAddRows = false;
-            dgvList.AllowUserToDeleteRows = false;
-            dgvList.AllowUserToResizeRows = false;
-            dgvList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvList.Columns.AddRange(new DataGridViewColumn[] { cId, cName, cSerename, cProfessionId, cOfficeId, cProfession, cOffice });
-            dgvList.Location = new Point(12, 41);
-            dgvList.MultiSelect = false;
-            dgvList.Name = "dgvList";
-            dgvList.ReadOnly = true;
-            dgvList.RowHeadersVisible = false;
-            dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvList.Size = new Size(1157, 442);
-            dgvList.TabIndex = 13;
             // 
             // bDelete
             // 
@@ -99,6 +83,23 @@
             bAdd.Text = "Add";
             bAdd.UseVisualStyleBackColor = true;
             bAdd.Click += bAdd_Click;
+            // 
+            // dgvList
+            // 
+            dgvList.AllowUserToAddRows = false;
+            dgvList.AllowUserToDeleteRows = false;
+            dgvList.AllowUserToResizeRows = false;
+            dgvList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvList.Columns.AddRange(new DataGridViewColumn[] { cId, cName, cSerename, cProfessionId, cOfficeId, cProfession, cOffice, cCardCode });
+            dgvList.Location = new Point(12, 41);
+            dgvList.MultiSelect = false;
+            dgvList.Name = "dgvList";
+            dgvList.ReadOnly = true;
+            dgvList.RowHeadersVisible = false;
+            dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvList.Size = new Size(1157, 442);
+            dgvList.TabIndex = 13;
             // 
             // cId
             // 
@@ -153,6 +154,13 @@
             cOffice.Name = "cOffice";
             cOffice.ReadOnly = true;
             // 
+            // cCardCode
+            // 
+            cCardCode.DataPropertyName = "CardCode";
+            cCardCode.HeaderText = "CardCode";
+            cCardCode.Name = "cCardCode";
+            cCardCode.ReadOnly = true;
+            // 
             // EmployeeList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -172,10 +180,10 @@
         #endregion
 
         private Button bRefresh;
-        private DataGridView dgvList;
         private Button bDelete;
         private Button bEdit;
         private Button bAdd;
+        private DataGridView dgvList;
         private DataGridViewTextBoxColumn cId;
         private DataGridViewTextBoxColumn cName;
         private DataGridViewTextBoxColumn cSerename;
@@ -183,5 +191,6 @@
         private DataGridViewTextBoxColumn cOfficeId;
         private DataGridViewTextBoxColumn cProfession;
         private DataGridViewTextBoxColumn cOffice;
+        private DataGridViewTextBoxColumn cCardCode;
     }
 }

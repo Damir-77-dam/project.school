@@ -26,7 +26,8 @@ public partial class EmployeeList : Form
                 ProfessionId = x.ProfessionId,
                 Position = x.Profession.Position,
                 OfficeId = x.OfficeId,
-                Office = x.Office.FullInfo
+                Office = x.Office.FullInfo,
+                CardCode =x.CardCode
             })
             .ToList();
         dgvList.DataSource = list;
@@ -101,7 +102,8 @@ public partial class EmployeeList : Form
                 ProfessionId = x.ProfessionId,
                 Position = x.Profession.Position,
                 OfficeId = x.OfficeId,
-                Office = x.Office.FullInfo
+                Office = x.Office.FullInfo,
+                CardCode = x.CardCode
             })
             .ToList();
         dgvList.DataSource = list;

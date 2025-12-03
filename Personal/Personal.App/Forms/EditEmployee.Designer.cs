@@ -40,6 +40,8 @@
             lId = new Label();
             cbOffice = new ComboBox();
             cbProfession = new ComboBox();
+            lCardCode = new Label();
+            tbCardCode = new TextBox();
             SuspendLayout();
             // 
             // lOfficeId
@@ -150,11 +152,29 @@
             cbProfession.TabIndex = 37;
             cbProfession.ValueMember = "Id";
             // 
+            // lCardCode
+            // 
+            lCardCode.Location = new Point(7, 156);
+            lCardCode.Name = "lCardCode";
+            lCardCode.Size = new Size(202, 23);
+            lCardCode.TabIndex = 38;
+            lCardCode.Text = "CardCode";
+            // 
+            // tbCardCode
+            // 
+            tbCardCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbCardCode.Location = new Point(215, 153);
+            tbCardCode.Name = "tbCardCode";
+            tbCardCode.Size = new Size(440, 23);
+            tbCardCode.TabIndex = 39;
+            // 
             // EditEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(666, 309);
+            Controls.Add(tbCardCode);
+            Controls.Add(lCardCode);
             Controls.Add(cbProfession);
             Controls.Add(cbOffice);
             Controls.Add(lOfficeId);
@@ -188,5 +208,7 @@
         private Label lId;
         private ComboBox cbOffice;
         private ComboBox cbProfession;
+        private Label lCardCode;
+        private TextBox tbCardCode;
     }
 }

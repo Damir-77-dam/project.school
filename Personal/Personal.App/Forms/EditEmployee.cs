@@ -41,6 +41,8 @@ namespace Personal.App
 
                 //Office
                 cbOffice.SelectedValue = entity.OfficeId;
+
+                tbCardCode.Text = entity.CardCode;
             }
         }
 
@@ -68,7 +70,8 @@ namespace Personal.App
                         Name = tbName.Text,
                         Serename = tbSerename.Text,
                         ProfessionId = (int)cbProfession.SelectedValue,
-                        OfficeId = (int)cbOffice.SelectedValue
+                        OfficeId = (int)cbOffice.SelectedValue,
+                        CardCode = tbCardCode.Text
                     });
                     context.SaveChanges();
                     DialogResult = DialogResult.OK;
@@ -88,7 +91,8 @@ namespace Personal.App
                         Name = tbName.Text,
                         Serename = tbSerename.Text,
                         ProfessionId = (int)cbProfession.SelectedValue,
-                        OfficeId = (int)cbOffice.SelectedValue
+                        OfficeId = (int)cbOffice.SelectedValue,
+                        CardCode = tbCardCode.Text
                     });
                     context.SaveChanges();
                     DialogResult = DialogResult.OK;
