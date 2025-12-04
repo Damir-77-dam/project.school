@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Personal.App.Database.Entities;
-using System.Reflection.Emit;
 
 namespace Personal.App.Database.Mappings;
 public class EmployeeMaping : IEntityTypeConfiguration<Employee>
