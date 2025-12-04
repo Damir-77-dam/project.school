@@ -27,7 +27,7 @@ public partial class EmployeeList : Form
                 Position = x.Profession.Position,
                 OfficeId = x.OfficeId,
                 Office = x.Office.FullInfo,
-                CardCode =x.CardCode
+                CardCode = x.CardCode
             })
             .ToList();
         dgvList.DataSource = list;

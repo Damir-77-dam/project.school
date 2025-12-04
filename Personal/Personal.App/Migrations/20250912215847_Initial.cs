@@ -121,7 +121,7 @@ namespace Personal.App.Migrations
                 column: "ProfessionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Employees_ProfessionId",
+                name: "IX_Employees_CardCode",
                 table: "Employees",
                 column: "CardCode");
         }

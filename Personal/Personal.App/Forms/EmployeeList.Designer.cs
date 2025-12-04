@@ -173,6 +173,7 @@
             Controls.Add(bAdd);
             Name = "EmployeeList";
             Text = "EmployeeList";
+            Load += EmployeeList_Load;
             ((System.ComponentModel.ISupportInitialize)dgvList).EndInit();
             ResumeLayout(false);
         }
