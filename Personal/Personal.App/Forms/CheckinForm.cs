@@ -1,4 +1,6 @@
-﻿namespace Personal.App;
+﻿using System.Windows.Forms;
+
+namespace Personal.App;
 
 public partial class CheckinForm : Form
 {
@@ -27,11 +29,14 @@ public partial class CheckinForm : Form
             profashionalToolStripMenuItem.Visible = true;
             sOtrudnikiToolStripMenuItem.Visible = true;
         }
-        loginToolStripMenuItem.Visible = false;
-        logoutToolStripMenuItem.Visible = true;
-        reportToolStripMenuItem.Visible = true;
-        label1.Visible = false;
-        tbBarcode.Visible = false;
+        if (dialogResult == DialogResult.OK || dialogResult == DialogResult.Yes)
+        {
+            loginToolStripMenuItem.Visible = false;
+            logoutToolStripMenuItem.Visible = true;
+            reportToolStripMenuItem.Visible = true;
+            label1.Visible = false;
+            tbBarcode.Visible = false;
+        }
     }
 
     private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
