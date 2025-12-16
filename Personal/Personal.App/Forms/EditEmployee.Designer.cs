@@ -167,6 +167,7 @@
             tbCardCode.Name = "tbCardCode";
             tbCardCode.Size = new Size(440, 23);
             tbCardCode.TabIndex = 39;
+            tbCardCode.KeyPress += tbCardCode_KeyPress;
             // 
             // EditEmployee
             // 
