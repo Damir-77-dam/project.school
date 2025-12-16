@@ -59,6 +59,28 @@ namespace Personal.App
         private void bSave_Click(object sender, EventArgs e)
         {
             //TODO: Check errors
+            string input = tbCardCode.Text;
+
+            // 2. Проверяем, не пустое ли поле
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                MessageBox.Show("Поле Card Code не может быть пустым!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Останавливаем код, ничего не сохраняем
+            }
+
+            // 3. Проверяем, что введены только цифры
+            foreach (char c in input)
+            {
+                if (!char.IsDigit(c))
+                {
+                    MessageBox.Show("Ошибка: В поле Card Code должны быть только цифры!", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Останавливаем код, если нашли не цифру
+                }
+            }
+
+            // --- КОНЕЦ БЛОКА ПРОВЕРКИ ---
+            // Если код дошел сюда, значит всё в порядке, выполняем сохранение:
+
             if (_isEditMode)
             {
                 try
@@ -78,7 +100,7 @@ namespace Personal.App
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Error");
+                    MessageBox.Show("Error while updating employee.");
                 }
             }
             else
@@ -99,7 +121,7 @@ namespace Personal.App
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Error");
+                    MessageBox.Show("Error while adding employee.");
                 }
             }
         }
