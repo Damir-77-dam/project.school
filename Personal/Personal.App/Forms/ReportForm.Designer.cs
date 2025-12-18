@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             dgvList = new DataGridView();
+            monthCalendar1 = new MonthCalendar();
+            bGo = new Button();
             cOfficeId = new DataGridViewTextBoxColumn();
-            cOfficeName = new DataGridViewTextBoxColumn();
+            cOfficeInfo = new DataGridViewTextBoxColumn();
             cFullName = new DataGridViewTextBoxColumn();
             cEmployeeId = new DataGridViewTextBoxColumn();
             cTotalTime = new DataGridViewTextBoxColumn();
-            monthCalendar1 = new MonthCalendar();
-            bGo = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvList).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             dgvList.AllowUserToResizeRows = false;
             dgvList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvList.Columns.AddRange(new DataGridViewColumn[] { cOfficeId, cOfficeName, cFullName, cEmployeeId, cTotalTime });
+            dgvList.Columns.AddRange(new DataGridViewColumn[] { cOfficeId, cOfficeInfo, cFullName, cEmployeeId, cTotalTime });
             dgvList.Location = new Point(12, 192);
             dgvList.MultiSelect = false;
             dgvList.Name = "dgvList";
@@ -55,45 +55,6 @@
             dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvList.Size = new Size(962, 445);
             dgvList.TabIndex = 14;
-            // 
-            // cOfficeId
-            // 
-            cOfficeId.DataPropertyName = "OfficeId";
-            cOfficeId.HeaderText = "OfficeId";
-            cOfficeId.Name = "cOfficeId";
-            cOfficeId.ReadOnly = true;
-            cOfficeId.Width = 50;
-            // 
-            // cOfficeName
-            // 
-            cOfficeName.DataPropertyName = "OfficeName";
-            cOfficeName.HeaderText = "OfficeName";
-            cOfficeName.Name = "cOfficeName";
-            cOfficeName.ReadOnly = true;
-            cOfficeName.Width = 200;
-            // 
-            // cFullName
-            // 
-            cFullName.DataPropertyName = "FullName";
-            cFullName.HeaderText = "FullName";
-            cFullName.Name = "cFullName";
-            cFullName.ReadOnly = true;
-            cFullName.Width = 300;
-            // 
-            // cEmployeeId
-            // 
-            cEmployeeId.DataPropertyName = "EmployeeId";
-            cEmployeeId.HeaderText = "EmployeeId";
-            cEmployeeId.Name = "cEmployeeId";
-            cEmployeeId.ReadOnly = true;
-            cEmployeeId.Width = 200;
-            // 
-            // cTotalTime
-            // 
-            cTotalTime.DataPropertyName = "TotalTime";
-            cTotalTime.HeaderText = "TotalTime";
-            cTotalTime.Name = "cTotalTime";
-            cTotalTime.ReadOnly = true;
             // 
             // monthCalendar1
             // 
@@ -110,6 +71,47 @@
             bGo.Text = "Go";
             bGo.UseVisualStyleBackColor = true;
             bGo.Click += bGo_Click;
+            // 
+            // cOfficeId
+            // 
+            cOfficeId.DataPropertyName = "OfficeId";
+            cOfficeId.HeaderText = "OfficeId";
+            cOfficeId.Name = "cOfficeId";
+            cOfficeId.ReadOnly = true;
+            cOfficeId.Visible = false;
+            cOfficeId.Width = 50;
+            // 
+            // cOfficeInfo
+            // 
+            cOfficeInfo.DataPropertyName = "OfficeInfo";
+            cOfficeInfo.HeaderText = "OfficeInfo";
+            cOfficeInfo.Name = "cOfficeInfo";
+            cOfficeInfo.ReadOnly = true;
+            cOfficeInfo.Width = 200;
+            // 
+            // cFullName
+            // 
+            cFullName.DataPropertyName = "FullName";
+            cFullName.HeaderText = "FullName";
+            cFullName.Name = "cFullName";
+            cFullName.ReadOnly = true;
+            cFullName.Width = 300;
+            // 
+            // cEmployeeId
+            // 
+            cEmployeeId.DataPropertyName = "EmployeeId";
+            cEmployeeId.HeaderText = "EmployeeId";
+            cEmployeeId.Name = "cEmployeeId";
+            cEmployeeId.ReadOnly = true;
+            cEmployeeId.Visible = false;
+            cEmployeeId.Width = 200;
+            // 
+            // cTotalTime
+            // 
+            cTotalTime.DataPropertyName = "TotalTimeSpan";
+            cTotalTime.HeaderText = "TotalTime";
+            cTotalTime.Name = "cTotalTime";
+            cTotalTime.ReadOnly = true;
             // 
             // ReportForm
             // 
@@ -128,12 +130,13 @@
         #endregion
 
         private DataGridView dgvList;
-        private DataGridViewTextBoxColumn cOfficeId;
         private DataGridViewTextBoxColumn cOfficeName;
+        private MonthCalendar monthCalendar1;
+        private Button bGo;
+        private DataGridViewTextBoxColumn cOfficeId;
+        private DataGridViewTextBoxColumn cOfficeInfo;
         private DataGridViewTextBoxColumn cFullName;
         private DataGridViewTextBoxColumn cEmployeeId;
         private DataGridViewTextBoxColumn cTotalTime;
-        private MonthCalendar monthCalendar1;
-        private Button bGo;
     }
 }
