@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace Personal.App;
+﻿namespace Personal.App;
 
 public partial class CheckinForm : Form
 {
@@ -89,5 +87,10 @@ public partial class CheckinForm : Form
             return;
         }
         _isMiddleButton = 0;
+    }
+
+    private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        new ReportForm().Show();
     }
 }

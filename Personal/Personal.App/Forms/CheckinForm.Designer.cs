@@ -113,6 +113,7 @@
             reportToolStripMenuItem.Size = new Size(54, 20);
             reportToolStripMenuItem.Text = "Report";
             reportToolStripMenuItem.Visible = false;
+            reportToolStripMenuItem.Click += reportToolStripMenuItem_Click;
             // 
             // CheckinForm
             // 

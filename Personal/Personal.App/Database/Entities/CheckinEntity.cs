@@ -3,9 +3,9 @@ public class CheckinEntity
 {
     public int Id { get; set; }
 
-    public DateTime Eventtime { get; set; }
+    public DateTime EnterTime { get; set; }
 
-    public string TypeEvent { get; set; }
+    public DateTime ExitTime { get; set; }
 
     public int EmployeeID { get; set; }
 
